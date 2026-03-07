@@ -1,5 +1,7 @@
 import { ConditionalFooter } from "@/components/conditional-footer";
 import { Toaster } from "@/components/ui/sonner";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ptBR } from "@clerk/localizations";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { headers } from 'next/headers';
@@ -26,9 +28,11 @@ export default async function RootLayout({
   return (
     <html lang="pt-BR" className={inter.className}>
       <body className="antialiased">
-        <main className="">{children}</main>
-        <Toaster />
-        <ConditionalFooter />
+        <ClerkProvider localization={ptBR}>
+          <main className="">{children}</main>
+          <Toaster />
+          <ConditionalFooter />
+        </ClerkProvider>
       </body>
     </html>
   );
