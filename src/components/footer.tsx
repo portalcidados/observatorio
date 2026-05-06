@@ -23,7 +23,7 @@ const projetosItems = [
     description: "Explore indicadores de mobilidade de diferentes cidades brasileiras em uma tabela interativa.",
   },
   {
-    title: "Dashboard - WRI Brasil",
+    title: "Painel QualiÔnibus",
     href: "/projetos/dashboard-wri-brasil",
     description: "Parceria ONMS & WRI Brasil - Dashboard dos dados do QualiÔnibus.",
   },
